@@ -1,0 +1,23 @@
+.side_bar
+  .header
+    .header__user
+      Username
+    .header__btn
+      = link_to "#", class: "header__btn" do
+        = icon('fas', 'edit',class:"header__btn--icon")
+      = link_to "#", class: "header__btn" do
+        = icon('fas', 'cog',class:"header__btn--icon")
+
+  .contents-main
+    .contents-main__group
+      group
+    
+    .contents-main__message
+      message
+
+  .contents-sub
+    .contents-sub__group
+      group
+      
+    .contents-sub__message
+      message
