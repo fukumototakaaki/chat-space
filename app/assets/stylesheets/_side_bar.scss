@@ -16,7 +16,7 @@
   }
   &__btn{
     color: #FFFF;
-
+    text-decoration: none;
   }
 }
 
@@ -40,7 +40,7 @@
   background-color: #2f3e51;
   color: #FFFF;
   width: 260px;
-  height: calc(100vh - 82px - 51px);
+  height: calc(100vh - 75px - 32px);
   padding: 0 20px;
 
   &__group{
