@@ -1,8 +1,9 @@
 .chat_group{
   background-color: #fafafa;
-  padding: 46px 40px 46px 40px;
+  padding: 46px 40px;
   height: calc(100vh - 190px);
   overflow: scroll;
+  box-sizing: border-box;
 
   .message{
     display: flex;

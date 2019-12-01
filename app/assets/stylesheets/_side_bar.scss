@@ -1,5 +1,6 @@
 .side_bar{
   float: left;
+  box-sizing: border-box;
 
   .header {
     display: flex;
@@ -20,28 +21,29 @@
     }
   }
 
-  .contents-main{
-    @extend.side_bar_content;
+  .contents{
+    height: calc(100vh - 158px);
+    background-color: #2f3e51;
+    color: #FFFF;
+    width: 260px;
     padding: 20px 20px 40px 20px;
-
-    &__group{
-      @extend.side_bar_group;
+    .contents-main{
+      &__group{
+        @extend.side_bar_group;
+      }
+      &__message{
+        @extend.side_bar_message;
+      }
     }
-    &__message{
-      @extend.side_bar_message;
-    }
-  }
 
-  .contents-sub{
-    @extend.side_bar_content;
-    height: calc(100vh - 75px - 32px);
-    padding: 0 20px;
-
-    &__group{
-      @extend.side_bar_group;
-    }
-    &__message{
-      @extend.side_bar_message;
+    .contents-sub{
+      padding-top: 46px;
+      &__group{
+        @extend.side_bar_group;
+      }
+      &__message{
+        @extend.side_bar_message;
+      }
     }
   }
 }
