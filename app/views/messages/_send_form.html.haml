@@ -1,0 +1,11 @@
+.send_form
+  
+  %label{class: "message-form"}
+    %input{type: "text", value:"",placeholder: "type a message",class:"message-form__text"}
+
+    %label{class: "input-box"}
+      = icon('fas', 'image',class: "input-box__icon")
+      %input{type: "file",class: "input-box__file"}
+
+    %label{class: "send-box"}
+      %input{type: "submit", value: "send",class:"send-box__btn"}

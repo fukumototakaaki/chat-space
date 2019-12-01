@@ -1,0 +1,49 @@
+.side_bar{
+  float: left;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    height: 63px;
+    background-color: #253141;
+    color: #FFFF;
+    padding: 35px 20px 0px 20px;
+  
+    &__user{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__btn{
+      color: #FFFF;
+      text-decoration: none;
+    }
+  }
+
+  .contents{
+    height: calc(100vh - 158px);
+    background-color: #2f3e51;
+    color: #FFFF;
+    width: 260px;
+    padding: 20px 20px 40px 20px;
+    .contents-main{
+      &__group{
+        @extend.side_bar_group;
+      }
+      &__message{
+        @extend.side_bar_message;
+      }
+    }
+
+    .contents-sub{
+      padding-top: 46px;
+      &__group{
+        @extend.side_bar_group;
+      }
+      &__message{
+        @extend.side_bar_message;
+      }
+    }
+  }
+}
