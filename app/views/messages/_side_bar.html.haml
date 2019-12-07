@@ -3,21 +3,17 @@
     %h3.header__user
       = current_user.name
     .header__btn
-      = link_to "#", class: "header__btn" do
+      = link_to new_group_path, class: "header__btn" do
         = icon('fas', 'edit',class:"header__btn--icon")
       = link_to edit_user_path(current_user), class: "header__btn" do
         = icon('fas', 'cog',class:"header__btn--icon")
   .contents
-    .contents-main
-      .contents-main__group
-        group1
-      
-      .contents-main__message
-        message1
+    - current_user.groups.each do |group|
+      .contents-main
+        = link_to group_messages_path(group) do
+          .contents-main__group
+            = group.name
+          
+          .contents-main__message
+            メッセージはまだありません。
 
-    .contents-sub
-      .contents-sub__group
-        group2
-        
-      .contents-sub__message
-        message2
