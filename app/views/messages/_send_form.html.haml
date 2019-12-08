@@ -1,11 +1,12 @@
 .send_form
-  
-  %label{class: "message-form"}
-    %input{type: "text", value:"",placeholder: "type a message",class:"message-form__text"}
+  = form_for [@group, @message] do |f|
+    .message-form
+      = f.text_field :text, class:"message-form__text", placeholder: "type a message"
 
-    %label{class: "input-box"}
-      = icon('fas', 'image',class: "input-box__icon")
-      %input{type: "file",class: "input-box__file"}
-
-    %label{class: "send-box"}
-      %input{type: "submit", value: "send",class:"send-box__btn"}
+      .input-box
+        = f.label :image, class: "input-box" do
+          = icon('fas', 'image',class: "input-box__icon")
+          = f.file_field :image, class:"input-box__file"
+    
+      .send-box
+        = f.submit "Send", class:"send-box__btn"
