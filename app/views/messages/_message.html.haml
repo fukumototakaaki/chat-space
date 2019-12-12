@@ -1,0 +1,13 @@
+.chat_group
+  .group
+    .group_message
+      .group_message__member
+        = message.user.name
+
+      .group_message__time
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
+        
+    .group_text
+      - if message.text.present?
+        = message.text
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
