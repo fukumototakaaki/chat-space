@@ -4,8 +4,11 @@
       = @group.name
     
     .main-header__member
-      aaa
+      Member :
+      - @group.users.each do |user|
+        = user.name
+      
 
   .edit
-    = link_to "#", class: "edit__btn" do
+    = link_to edit_group_path(@group), class: "edit__btn" do
       Edit
