@@ -60,5 +60,8 @@ $(function(){
     .fail(function() {
       alert("メッセージ送信に失敗しました");
     });
+    .always(function(){
+      $('.send-box__btn').prop('disabled', false);
+    });
   });
 });
